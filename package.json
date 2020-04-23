@@ -1,0 +1,72 @@
+{
+  "name": "el-ui-form",
+  "version": "0.0.1",
+  "author": "waka3",
+  "description": "On the basis of element-ui, a simple secondary packaging of the form is convenient for use",
+  "main": "dist/el-ui-form.umd.js",
+  "module": "dist/el-ui-form.esm.js",
+  "unpkg": "dist/el-ui-form.min.js",
+  "browser": {
+    "./sfc": "src/el-ui-form.vue"
+  },
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "prepublishOnly": "npm run build",
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/el-ui-form.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/el-ui-form.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/el-ui-form.min.js",
+    "lint": "vue-cli-service lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "element-ui",
+    "form"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waka3/el-ui-form.git"
+  },
+  "bugs": {
+    "url": "https://github.com/waka3/el-ui-form/issues"
+  },
+  "devDependencies": {
+    "rollup": "^2.7.1",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-vue": "^5.1.6",
+    "@vue/cli-plugin-babel": "~4.3.0",
+    "@vue/cli-plugin-eslint": "~4.3.0",
+    "@vue/cli-service": "~4.3.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11",
+    "core-js": "^3.6.4",
+    "element-ui": "^2.13.1",
+    "vue": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
