@@ -1,7 +1,7 @@
 <template>
   <el-checkbox-group v-model="value" v-bind="$attrs" v-on="$listeners">
     <template v-for="item in code">
-      <el-checkbox :key="unique + '_' + item.key" :label="item.key">{{ item.value }}</el-checkbox>
+      <el-checkbox :key="unique + '_' + item.key" :label="item[opsKey]">{{ item[opsValue] }}</el-checkbox>
     </template>
   </el-checkbox-group>
 </template>
@@ -27,7 +27,15 @@ export default {
     code: {
       type: [String, Array, Object],
       default: () => {}
-    }
+    },
+    opsKey: {
+      type: String,
+      default: 'key'
+    },
+    opsValue: {
+      type: String,
+      default: 'value'
+    },
   },
   data() {
     return {

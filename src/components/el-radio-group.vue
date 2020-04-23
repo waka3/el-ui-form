@@ -1,7 +1,7 @@
 <template>
   <el-radio-group v-model="value" v-bind="$attrs" v-on="$listeners">
     <template v-for="item in code">
-      <el-radio :key="unique + '_' + item.key" :label="item.key">{{ item.value }}</el-radio>
+      <el-radio :key="unique + '_' + item.key" :label="item[opsKey]">{{ item[opsValue] }}</el-radio>
     </template>
   </el-radio-group>
 </template>
@@ -25,7 +25,15 @@ export default {
     code: {
       type: [String, Array, Object],
       default: () => {}
-    }
+    },
+    opsKey: {
+      type: String,
+      default: 'key'
+    },
+    opsValue: {
+      type: String,
+      default: 'value'
+    },
   },
   data() {
     return {
