@@ -7,7 +7,7 @@ npm install el-ui-form
 ```
 ### CDN使用
 ```
-<script src="https://unpkg.com/el-ui-form.min.js"></script>
+<script src="https://unpkg.com/el-ui-form"></script>
 ```
 
 ## 快速上手 
@@ -254,4 +254,4 @@ formItems: [
 ]
 ```
 效果：
-![基础表单效果](./assets/imgs/2.jpg)
+![基础表单效果](./assets/imgs/2.png)

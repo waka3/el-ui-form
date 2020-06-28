@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>el-ui-form</title>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/element-ui"></script>
+  <link href="https://cdn.bootcss.com/element-ui/2.10.1/theme-chalk/index.css" rel="stylesheet">
+  <script src="https://unpkg.com/el-ui-form"></script>
+</head>
+
+<body>
+  <div id="app">
+    <el-ui-form :form-items="formItems" @submit-form="submitForm"></el-ui-form>
+  </div>
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data:{
+        formItems: [
+          { dom: 'el-input', label: 'input组件', prop: 'ipt',  attr: { placeholder: '请输入input内容', type: 'password', 'prefix-icon': 'el-icon-search' }},
+          { dom: 'el-switch', label: '开关', prop: 'switch' }
+        ]
+      },
+      methods: {
+        submitForm(form){}
+      }
+    })
+  </script>
+</body>
+</html>
