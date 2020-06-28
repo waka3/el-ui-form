@@ -1,6 +1,6 @@
 {
   "name": "el-ui-form",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "author": "waka3",
   "description": "On the basis of element-ui, a simple secondary packaging of the form is convenient for use",
   "main": "dist/el-ui-form.umd.js",
